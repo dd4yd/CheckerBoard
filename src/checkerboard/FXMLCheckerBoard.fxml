@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkerboard.CheckerBoardController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="519.0">
+         <menus>
+            <Menu fx:id="gridMenu" mnemonicParsing="false" text="Grid">
+               <items>
+                  <MenuItem fx:id="threeByThree" mnemonicParsing="false" onAction="#changeGridLayout" text="3x3" />
+                  <MenuItem fx:id="eightByEight" mnemonicParsing="false" onAction="#changeGridLayout" text="8x8" />
+                  <MenuItem fx:id="tenByTen" mnemonicParsing="false" onAction="#changeGridLayout" text="10x10" />
+                  <MenuItem fx:id="sixteenBySixteen" mnemonicParsing="false" onAction="#changeGridLayout" text="16x16" />
+               </items>
+            </Menu>
+            <Menu id="colorsMenu" fx:id="colorsMenu" mnemonicParsing="false" text="Colors">
+               <items>
+                  <MenuItem fx:id="defaultColors" mnemonicParsing="false" onAction="#changeColorScheme" text="Default" />
+                  <MenuItem fx:id="blueColors" mnemonicParsing="false" onAction="#changeColorScheme" text="Blue" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <VBox fx:id="vBoxDisplayArea">
+         <children>
+           <AnchorPane fx:id="anchorPane" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
